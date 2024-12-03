@@ -99,4 +99,5 @@ This project is licensed under the MIT License.
 
 This `README.md` provides clear instructions for setting up and running the project, as well as a brief explanation of its functionality.
 
-the deployment link : https://hotel-assessment-ui-task-nine.vercel.app/
+frontend deployment link : https://hotel-assessment-ui-task-nine.vercel.app/
+backend deployment link  : https://backend-data-v1wg.onrender.com/
