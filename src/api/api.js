@@ -8,17 +8,17 @@ const axiosInstance = axios.create({
   },
 });
 
-// Add request interceptor
+// Adding request interceptor
 axiosInstance.interceptors.request.use(
   (config) => {
-    // Add token or headers if required
+     
     config.headers['Authorization'] = 'Bearer your-token'; 
     return config;
   },
   (error) => Promise.reject(error)
 );
 
-// Add response interceptor
+// Adding response interceptor
 axiosInstance.interceptors.response.use(
   (response) => response,
   (error) => {

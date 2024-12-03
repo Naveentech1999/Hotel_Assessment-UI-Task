@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import useBookingStore from '../store/bookingStore';
 import { useMutation, useQuery, useQueryClient } from 'react-query';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate
+import { useNavigate } from 'react-router-dom';  
 import axiosInstance from '../api/api';
 
 const HotelBookingForm = () => {
   const { selectedHotel, guestName, setGuestName } = useBookingStore();
   const [confirmationMessage, setConfirmationMessage] = useState('');
   const queryClient = useQueryClient();
-  const navigate = useNavigate(); // Initialize useNavigate
+  const navigate = useNavigate();  
 
   const { data: bookings } = useQuery('bookings', async () => {
     const response = await axiosInstance.get('/bookings');
@@ -66,7 +66,7 @@ const HotelBookingForm = () => {
   };
 
   const handleBack = () => {
-    navigate(-1); // Go back to the previous page
+    navigate(-1);  
   };
 
   return (

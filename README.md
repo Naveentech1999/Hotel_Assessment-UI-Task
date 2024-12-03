@@ -1,96 +1,102 @@
-# React App with Fake JSON Server
+Here's a simple and clear `README.md` file for your **Hotel Booking App**:
 
-This project is a simple React application that demonstrates how to integrate a fake JSON server for development of Hotel booking app
+---
+
+# Hotel Booking App
+
+This is a simple React-based hotel booking application that allows users to:
+
+1. Select a hotel and book it with a guest name.
+2. View a confirmation message after successful booking.
+3. Clear all bookings from the backend JSON server.
 
 ## Features
 
-- Fetch and display data from a fake JSON server
-- Mock API for development without a backend
-- Easy-to-extend JSON data
+- **Hotel Selection and Booking**: Users can select a hotel and provide their guest name to book it.
+- **Booking Confirmation**: After successful booking, a personalized confirmation message is displayed.
+- **Clear All Bookings**: Users can delete all bookings from the backend.
+- **Error Handling**: Displays error messages for booking and deletion failures.
 
-## Prerequisites
+## Technologies Used
 
-Make sure you have the following installed on your machine:
-
-- [Node.js](https://nodejs.org/) (v14 or later)
-- [npm](https://www.npmjs.com/) (comes with Node.js)
-- [JSON Server](https://github.com/typicode/json-server)
+- **React**: Frontend framework for building the user interface.
+- **React Query**: For data fetching, mutations, and caching.
+- **Zustand**: For managing global client-side state.
+- **Axios**: For making HTTP requests to the backend JSON server.
+- **JSON Server**: Mock backend server for testing API requests.
 
 ## Installation
 
 1. Clone the repository:
-
    ```bash
-   git clone https://github.com/your-username/my-react-app.git
+   git clone https://github.com/your-username/hotel-booking-app.git
    ```
 
 2. Navigate to the project directory:
-
    ```bash
-   cd my-react-app
+   cd hotel-booking-app
    ```
 
 3. Install dependencies:
-
    ```bash
    npm install
    ```
 
-4. Install JSON Server globally (if not installed already):
+4. Start the JSON server (on port 4000):
    ```bash
-   npm install -g json-server
+   npx json-server --watch db.json --port 4000
    ```
 
-## Usage
-
-### Start the Fake JSON Server
-
-1. Start the JSON Server:
-   ```bash
-   json-server --watch db.json --port 5000
-   ```
-   This will start the server on `http://localhost:5000`.
-
-### Start the React App
-
-1. Run the development server:
-
+5. Start the React app:
    ```bash
    npm start
    ```
 
-2. Open your browser and navigate to:
-   ```
-   http://localhost:3000
-   ```
+## Usage
 
-## Project Structure
+1. Select a hotel from the dropdown (if available).
+2. Enter a guest name and click **Confirm Booking**.
+3. A confirmation message will display:  
+   **"Hello [Guest Name], you have successfully booked [Hotel Name]."**
+4. To clear all bookings, click the **Clear All Bookings** button.
+
+## File Structure
 
 ```
-my-react-app/
-├── public/
-├── src/
-│   ├── App.js
-│   ├── index.js
-│   ├── ...
-├── db.json
-├── package.json
-├── README.md
+src/
+├── api/
+│   └── api.js               # Axios instance configuration
+├── components/
+│   └── HotelBookingForm.js  # Hotel booking form component
+├── store/
+│   └── bookingStore.js      # Zustand store for managing booking state
+└── App.js                   # Main app component
 ```
 
-## Dependencies
+## API Endpoints
 
-- [React](https://reactjs.org/)
-- [Axios](https://axios-http.com/)
-- [JSON Server](https://github.com/typicode/json-server)
+- **GET /bookings**: Fetches all bookings.
+- **POST /bookings**: Adds a new booking.
+- **DELETE /bookings/:id**: Deletes a booking by ID.
 
-## Future Improvements
+## Example JSON Server Data (`db.json`)
 
-- Add support for `POST`, `PUT`, and `DELETE` operations
-- Create forms for adding/editing posts
-- Enhance UI with styling libraries like TailwindCSS or Material-UI
+```json
+{
+  "bookings": []
+}
+```
 
-## Acknowledgments
+## Contributing
 
-- [JSON Server Documentation](https://github.com/typicode/json-server)
-- [React Documentation](https://reactjs.org/)
+Feel free to submit issues or contribute to the project via pull requests.
+
+## License
+
+This project is licensed under the MIT License.
+
+---
+
+This `README.md` provides clear instructions for setting up and running the project, as well as a brief explanation of its functionality.
+
+the deployment link : https://hotel-assessment-ui-task-nine.vercel.app/

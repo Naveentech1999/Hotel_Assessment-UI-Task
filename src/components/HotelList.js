@@ -41,7 +41,7 @@ const HotelList = () => {
                   className="btn btn-primary"
                   onClick={() => {
                     setSelectedHotel(hotel);
-                    navigate('/booking'); // Redirect to the booking page
+                    navigate('/booking');  
                   }}
                 >
                   Book Now
