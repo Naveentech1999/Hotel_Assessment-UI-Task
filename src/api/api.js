@@ -1,8 +1,8 @@
 import axios from 'axios';
 
-// Create Axios instance
+// Creation of  Axios instance
 const axiosInstance = axios.create({
-  baseURL: 'http://localhost:10000/', // Update with your JSON server URL
+  baseURL: 'https://backend-data-v1wg.onrender.com/', 
   headers: {
     'Content-Type': 'application/json',
   },
